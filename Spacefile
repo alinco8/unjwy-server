@@ -1,0 +1,11 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: unjwy-update-api
+    src: ./
+    engine: nodejs16
+    primary: true
+    commands:
+      - npm run build
+    run: node dist/server.js
+    dev: bun run --watch src/server.ts
